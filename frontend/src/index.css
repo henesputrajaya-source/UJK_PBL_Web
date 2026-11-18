@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ink font-sans text-slate-200 antialiased;
+  background-image: radial-gradient(60rem 30rem at 50% -10%, rgba(79,107,255,.22), transparent 70%),
+    radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: auto, 24px 24px;
+  background-attachment: fixed;
+}
+
+@keyframes deal { from { opacity: 0; transform: translateY(18px) rotate(-1.2deg) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes pop { from { opacity: 0; transform: scale(.94) translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes slide-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+
+.anim-deal { animation: deal .55s cubic-bezier(.2,.8,.2,1) both; }
+.anim-pop { animation: pop .22s ease-out both; }
+.anim-toast { animation: slide-in .25s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-deal, .anim-pop, .anim-toast { animation: none; }
+}
