@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS siswa;
 
 CREATE TABLE siswa (
-  id_siswa      INTEGER PRIMARY KEY,          -- diisi manual, tanpa SERIAL
+  id_siswa      INTEGER PRIMARY KEY,   
   nama          VARCHAR(100) NOT NULL,
-  jurusan       VARCHAR(100) NOT NULL,        -- opsi: tambahkan CHECK (jurusan IN ('IPA','IPS'))
+  jurusan       VARCHAR(100) NOT NULL, 
   tanggal_lahir DATE         NOT NULL,
   alamat        TEXT         NOT NULL
 );
